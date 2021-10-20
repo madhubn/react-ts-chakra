@@ -1,34 +1,13 @@
-import React, { Component } from 'react';
+import { ChakraProvider } from '@chakra-ui/react';
+import * as React from 'react';
 import { render } from 'react-dom';
-import Hello from './Hello';
-import './style.css';
-import { Box, ThemeProvider } from '@chakra-ui/core';
 
-interface AppProps {}
-interface AppState {
-  name: string;
-}
+import App from './App';
 
-class App extends Component<AppProps, AppState> {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: 'React',
-    };
-  }
-
-  render() {
-    return (
-      <div>
-        <Hello />
-      </div>
-    );
-  }
-}
-
+const rootElement = document.getElementById('root');
 render(
-  <ThemeProvider>
+  <ChakraProvider>
     <App />
-  </ThemeProvider>,
-  document.getElementById('root')
+  </ChakraProvider>,
+  rootElement
 );
