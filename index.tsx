@@ -21,7 +21,6 @@ class App extends Component<AppProps, AppState> {
     return (
       <div>
         <Hello />
-        
       </div>
     );
   }
